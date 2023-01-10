@@ -54,16 +54,6 @@ Sleep(500);
 ------------------------------------------
 
 AcceptQuestFrom(2079,457);  -- The Balance of Nature
-if(Player.Class == 11) then  --- Druid
-Log("Nature bless you my friend!");
-AcceptQuestFrom(2079,3120);  -- Verdant Sigil
-Sleep(500);
-end
-if(Player.Class == 4) then  --- Hunter
-Log("Lets go lurking into shadows!");
-AcceptQuestFrom(2079,3117);  -- Verdant Sigil
-Sleep(500);
-end
 
 Mangy = {}; -- New Table to store our mob IDs
 Mangy[1] = 2032;  -- ID for Mangy Nightsaber (for quest Balance of Nature)
@@ -79,10 +69,6 @@ AcceptQuestFrom(8584,3519);  -- A Friend in Need
 
 
 ------------------------------------------
-
-if(Player.Class == 11) then
-TurnInQuestAt(3597,3120);
-end
 
 
 
@@ -148,24 +134,27 @@ end;
 TurnInQuestAt(2082,917);    --- Webwood Egg
 
 AcceptQuestFrom(2082,920);    --- Tenaron's Summons
+
+if (CanTurnInQuest(920) == true) then
+
+QuestGoToPoint(10494.32,806.0022,1397.266);
 TurnInQuestAt(3514,920);    --- Tenaron's Summons
+end;
 
 AcceptQuestFrom(3514,921);    --- Crown of the Earth
+
 
 if (IsOnQuest(921) == true) and (CanTurnInQuest(921) == false) then
     
     
         QuestGoToPoint(10711.25,761.3188,1321.302);    
 		UsePhial()
+		Sleep(500);
        
-    
 end;
 
 
-
-QuestGoToPoint(10711.25,761.3188,1321.302);    
-UsePhial()
-
+QuestGoToPoint(10494.32,806.0022,1397.266);
 TurnInQuestAt(3514,921);    --- Crown of the Earth
 
 StopQuestProfile();
