@@ -40,7 +40,20 @@ Wolf[1] = 705;
 KillLootWolf = CreateObjective("KillMobsAndLoot",1,8,1,179,TableToList(Wolf));
 MyInfo = DoObjective(KillLootWolf);
 
-TurnInQuestAt(658,179); 
+TurnInQuestAt(658,179);
+Log("Taking A New Threat");
+
+AcceptQuestFrom(713,170);    --- A New Threat
+
+Trogg = {}; 
+Trogg[1] = 707;
+Burly = {}; 
+Burly[1] = 724;
+
+Trogg = CreateObjective("KillMobs",1,6,2,170,TableToList(Trogg));
+MyInfo = DoObjective(Trogg);
+Burly = CreateObjective("KillMobs",2,6,2,170,TableToList(Burly));
+MyInfo = DoObjective(Burly);
 
 Log("Taking The Boar Hunter");
 AcceptQuestFrom(714,183);    --- The Boar Hunter
