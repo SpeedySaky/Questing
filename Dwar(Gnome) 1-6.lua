@@ -31,6 +31,7 @@ function UsePhial()
     end;
 ------------------------------------------
 
+Log("Taking Dwarven Outfitters");
 
 AcceptQuestFrom(658,179);    --- Dwarven Outfitters
 
@@ -40,39 +41,45 @@ KillLootWolf = CreateObjective("KillMobsAndLoot",1,8,1,179,TableToList(Wolf));
 MyInfo = DoObjective(KillLootWolf);
 
 TurnInQuestAt(658,179); 
-AcceptQuestFrom(714,183);    --- The Boar Hunter
 
+Log("Taking The Boar Hunter");
+AcceptQuestFrom(714,183);    --- The Boar Hunter
+Log("Taking Coldridge Valley Mail Delivery");
 AcceptQuestFrom(658,233);    --- Coldridge Valley Mail Delivery
 
 Boar = {}; 
 Boar[1] = 708; 
 Hunter = CreateObjective("KillMobs",1,8,1,183,TableToList(Boar));
 MyInfo = DoObjective(Hunter);
-
 TurnInQuestAt(714,183); 
-TurnInQuestAt(658,233); 
-
+TurnInQuestAt(658,233);
+ 
+Log("Taking The Troll Cave");
 AcceptQuestFrom(786,182);    --- The Troll Cave
 
 Whelp = {}; 
 Whelp[1] = 706; 
-Cave = CreateObjective("KillMobs",1,10,1,182,TableToList(Whelp));
+Whelp = CreateObjective("KillMobs",1,10,1,182,TableToList(Whelp));
 MyInfo = DoObjective(Whelp);
 TurnInQuestAt(786,182); 
 
+Log("Taking The Stolen Journal");
 AcceptQuestFrom(786,218);    --- The Stolen Journal
 Journal = {}; 
 Journal[1] = 808; 
-Journal = CreateObjective("KillMobsAndLoot",1,1,1,218,TableToList(Journal));
+KillLootJournal = CreateObjective("KillMobsAndLoot",1,1,1,218,TableToList(Journal));
 MyInfo = DoObjective(KillLootJournal);
 TurnInQuestAt(786,218); 
 
+Log("Taking Scalding Mornbrew Delivery");
 AcceptQuestFrom(12738,3364);    --- Scalding Mornbrew Delivery
 TurnInQuestAt(836,3364); 
 
+Log("Bring Back the Mug");
 AcceptQuestFrom(836,3365);    --- Bring Back the Mug
 TurnInQuestAt(12738,3365); 
 
+Log("Bring Senir's Observations");
 AcceptQuestFrom(786,282);    --- Senir's Observations
 TurnInQuestAt(1965,282); 
 
