@@ -3,7 +3,9 @@
 
 --- Just setting up some useful vars
 Player = GetPlayer();
------ Very basic questing profile by Mr.Fade !
+----- Welcome to questing profiles by SpeedySaky !
+		Log("Welcome to questing profiles by SpeedySaky !");
+
 --------------------------------------------------
 
 
@@ -21,14 +23,7 @@ UseItem("Hearthstone");
 	SleepPlugin(100);
 	end;
 end;
-function UsePhial()
-    UseItem("Crystal Phial");
-     SleepPlugin(500);
-        while(Player.IsChanneling or Player.IsCasting) do
-        SleepPlugin(500);
-        end;
-   
-    end;
+
 ------------------------------------------
 
 Log("Taking Dwarven Outfitters");
@@ -41,6 +36,20 @@ KillLootWolf = CreateObjective("KillMobsAndLoot",1,8,1,179,TableToList(Wolf));
 MyInfo = DoObjective(KillLootWolf);
 
 TurnInQuestAt(658,179);
+
+Log("Oh I am a paladin so i need to do class quest!");
+AcceptQuestFrom(658,3107);    --- Consecrated Rune-paladdin
+
+
+if (Player.Class == 2) and (IsOnQuest(3107)== true) then   --- Paladin
+Log("Turning classs quest!");
+
+TurnInQuestAt(926,3107);
+
+end;
+
+
+
 
 Log("Taking A New Threat");
 AcceptQuestFrom(713,170);    --- A New Threat
@@ -56,12 +65,20 @@ Burly = CreateObjective("KillMobs",2,6,2,170,TableToList(Burly));
 MyInfo = DoObjective(Burly);
 TurnInQuestAt(713,170);
 
-
-Log("Taking The Boar Hunter");
-AcceptQuestFrom(714,183);    --- The Boar Hunter
 Log("Taking Coldridge Valley Mail Delivery");
 AcceptQuestFrom(658,233);    --- Coldridge Valley Mail Delivery
+Log("Taking The Boar Hunter");
+AcceptQuestFrom(714,183);    --- The Boar Hunter
 
+if (FreeBagSpace() <= 2)  then
+    
+				Log("Selling");	
+
+        SellItemsAt(713);   
+		
+       
+    
+end;
 Boar = {}; 
 Boar[1] = 708; 
 Hunter = CreateObjective("KillMobs",1,8,1,183,TableToList(Boar));
@@ -99,27 +116,68 @@ TurnInQuestAt(786,182);
 
 Log("Taking The Stolen Journal");
 AcceptQuestFrom(786,218);    --- The Stolen Journal
-Journal = {}; 
+
+
+if( HasPlayerFinishedQuest(218) == false ) then
+	Log("Going for Boss");
+ QuestGoToPoint(-6495.694,306.0788,370.5521);    
+		Journal = {}; 
 Journal[1] = 808; 
 KillLootJournal = CreateObjective("KillMobsAndLoot",1,1,1,218,TableToList(Journal));
 MyInfo = DoObjective(KillLootJournal);
+end;
+
+
 TurnInQuestAt(786,218); 
 
 Log("Taking Scalding Mornbrew Delivery");
 AcceptQuestFrom(12738,3364);    --- Scalding Mornbrew Delivery
+
+Log("Turning Scalding Mornbrew Delivery");
 TurnInQuestAt(836,3364); 
+
+Log("Turning A Refugee's Quandary");
 TurnInQuestAt(8416,3361); 
+if (FreeBagSpace() <= 2)  then
+    
+				Log("Selling");	
 
-Log("Bring Back the Mug");
+        SellItemsAt(713);   
+		
+       
+    
+end;
+Log("Taking Bring Back the Mug");
 AcceptQuestFrom(836,3365);    --- Bring Back the Mug
+Log("Turning Bring Back the Mug");
 TurnInQuestAt(12738,3365); 
-
-Log("Bring Senir's Observations");
+Log("Taking Bring Senir's Observations");
 AcceptQuestFrom(786,282);    --- Senir's Observations
+
+if( IsOnQuest(2160) == false ) then
+
+UseHearthStone();
+end;
+
+if (Player.Class == 2) and (Player.Level <= 6) and (HasSpell(465)==false) then   --- Paladin
+
+Log("Oh I am a paladin let me train quick!");
+QuestGoToPoint(-6120,205.378,8974.395.5426)
+Log("Training");
+QuestTrainAt(926);
+
+end;
+
+Log("Turning Bring Senir's Observations");
 TurnInQuestAt(1965,282); 
+
+Log("Taking Supplies to Tannok");
+
 
 AcceptQuestFrom(6782,2160);    --- Supplies to Tannok
 
 
 
-StopQuestProfile();
+Log("Loading next profile");
+
+LoadAndRunQuestProfile("[Speedy-Questing]Dwarf-gnome-6-13.lua");
