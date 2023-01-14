@@ -37,14 +37,33 @@ MyInfo = DoObjective(KillLootWolf);
 
 TurnInQuestAt(658,179);
 
+if (Player.Class == 2) and (IsOnQuest(3107)== true) then   --- Paladin
 Log("Oh I am a paladin so i need to do class quest!");
-AcceptQuestFrom(658,3107);    --- Consecrated Rune-paladdin
+
+AcceptQuestFrom(658,3107);    --- Consecrated Rune-paladin
+
+end;
 
 
 if (Player.Class == 2) and (IsOnQuest(3107)== true) then   --- Paladin
 Log("Turning classs quest!");
 
 TurnInQuestAt(926,3107);
+
+end;
+
+if (Player.Class == 1) and (IsOnQuest(3106)== False) then   --- Warrior
+Log("Oh I am a warrior so i need to do class quest!");
+
+AcceptQuestFrom(658,3106);    --- Simple Rune-warrior
+
+end;
+
+
+if (Player.Class == 1) and (IsOnQuest(3106)== true) then   --- Warrior
+Log("Turning classs quest!");
+
+TurnInQuestAt(912,3106);
 
 end;
 
