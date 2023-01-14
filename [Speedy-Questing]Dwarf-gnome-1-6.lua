@@ -37,7 +37,7 @@ MyInfo = DoObjective(KillLootWolf);
 
 TurnInQuestAt(658,179);
 
-if (Player.Class == 2) and (IsOnQuest(3107)== true) then   --- Paladin
+if (Player.Class == 2) and (IsOnQuest(3107)== false) then   --- Paladin
 Log("Oh I am a paladin so i need to do class quest!");
 
 AcceptQuestFrom(658,3107);    --- Consecrated Rune-paladin
@@ -66,8 +66,82 @@ Log("Turning classs quest!");
 TurnInQuestAt(912,3106);
 
 end;
+if (Player.Class == 3) and (IsOnQuest(3108)== False) then   --- Hunter
+Log("Oh I am a Hunter so i need to do class quest!");
+
+AcceptQuestFrom(658,3108);    --- Simple Rune-warrior
+
+end;
 
 
+if (Player.Class == 3) and (IsOnQuest(3108)== true) then   --- Hunter
+Log("Turning classs quest!");
+
+TurnInQuestAt(895,3108);
+
+end;
+if (Player.Class == 5) and (IsOnQuest(3110)== False) then   --- Priest
+Log("Oh I am a Priest so i need to do class quest!");
+
+AcceptQuestFrom(658,3110);    --- Simple Rune-warrior
+
+end;
+
+
+if (Player.Class == 5) and (IsOnQuest(3110)== true) then   --- Priest
+Log("Turning classs quest!");
+
+TurnInQuestAt(837,3110);
+
+end;
+
+if (Player.Class == 4) and (IsOnQuest(3113)== False) then   --- Rogue
+Log("Oh I am a Rogue so i need to do class quest!");
+
+AcceptQuestFrom(658,3113);    --- 
+
+end;
+
+
+if (Player.Class == 4) and (IsOnQuest(3113)== true) then   --- Rogue
+Log("Turning classs quest!");
+
+TurnInQuestAt(916,3113);
+
+end;
+
+if (Player.Class == 9) and (IsOnQuest(3115)== False) then   --- Warlock
+Log("Oh I am a Warlock so i need to do class quest!");
+
+AcceptQuestFrom(658,3115);    --- 
+
+end;
+
+
+if (Player.Class == 9) and (IsOnQuest(3115)== true) then   --- Warlock
+
+Log("Turning classs quest!");
+
+TurnInQuestAt(460,3115);
+
+end;
+
+
+if (Player.Class == 8) and (IsOnQuest(3114)== False) then   --- Mage
+Log("Oh I am a Mage so i need to do class quest!");
+
+AcceptQuestFrom(658,3114);    --- 
+
+end;
+
+
+if (Player.Class == 8) and (IsOnQuest(3114)== true) then   --- Mage
+
+Log("Turning classs quest!");
+
+TurnInQuestAt(944,3114);
+
+end;
 
 
 Log("Taking A New Threat");
