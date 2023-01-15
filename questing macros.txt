@@ -1,77 +1,19 @@
-List of macros needed for questing
+Install addon from Macro.zip into your wotlk classic addon folder as any other addon you install
 
-This list might increase in time but macros are needed to be available ingame ECAXTLY named and EXACTLY copy paste code .
+\World of Warcraft\_classic_\Interface\AddOns
 
-After you create macros,reload ui or log out of the game and come back on the char.
+Log into game and check addon list for addon Macro and enable it.
 
-I suggest to make macros as GENERAL ones if you plan to use questing on multiple chars,so macros are available for every char.
+If addon not on list,then repeat from start,you did not install it right.
 
-Number 1 will always be MACRO NAME
+When ingame on char,you can check if addon loaded right by opening your macros window and check for macros it should create
 
-Number 2 will always be macro code 
-
------------------------------
-
------------------------------
-
------------------------------
-
-1-name
+Macros by name that you should have are
 
 Hearthstone
-
-2-code
-
-
-/run interactWithTarget()
-/script SelectGossipOption(1)
-/script ConfirmBinder()
-
-
------------------------------
-
-1-name
-
 Rhapsody
-
-2-code
-
-/script SelectGossipOption(2)
-/run BuyMerchantItem(1)
------------------------------
-
-1-name
-
 ThunderAle
-
-2-code
-
-/run interactWithTarget()
-/script SelectGossipOption(2)
-/run BuyMerchantItem(2)
-
------------------------------
-
-1-name
-
 IF
-
-2-code
-
-/run interactWithTarget()
-/script SelectGossipOption(1)
-/script numNodes = NumTaxiNodes()
-/script TakeTaxiNode(1)
-
------------------------------
-
-1-name
-
 Thelsamar
 
-2-code
-
-/run interactWithTarget()
-/script SelectGossipOption(1)
-/script numNodes = NumTaxiNodes()
-/script TakeTaxiNode(2)
+for any more info contact me on discord
