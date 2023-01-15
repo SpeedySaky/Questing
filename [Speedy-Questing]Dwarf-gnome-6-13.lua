@@ -636,4 +636,6 @@ TurnInQuestAt(1959,413);    --- Shimmer Stout
 Log("Accepting Stout to Kadrell");
 AcceptQuestFrom(1959,414);    --- Stout to Kadrell
 
-StopQuestProfile();
+
+
+LoadAndRunQuestProfile("[Speedy-Questing]Dwarf-gnome-13+.lua");
