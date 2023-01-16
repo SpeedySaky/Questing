@@ -106,22 +106,21 @@ Tooth[1] = 1161;
 KillLootTooth = CreateObjective("KillMobsAndLoot",1,8,1,267,TableToList(Tooth));
 MyInfo = DoObjective(KillLootTooth);
 
-Log("Doing In Defense of the King's Lands");
 
 Trogg = {}; 
 Trogg[1] = 1161; 
-Trogg = CreateObjective("KillMobs",1,10,1,224,TableToList(Trogg));
+Trogg = CreateObjective("KillMobs",1,10,2,224,TableToList(Trogg));
 MyInfo = DoObjective(Trogg);
 
 Scout = {}; 
 Scout[1] = 1162; 
-Scout = CreateObjective("KillMobs",1,10,1,224,TableToList(Scout));
+Scout = CreateObjective("KillMobs",2,10,2,224,TableToList(Scout));
 MyInfo = DoObjective(Scout);
 
 
 
 Log("Turning In Defense of the King's Lands");
-TurnInQuestAt(1092,224);    --- In Defense of the King's Lands
+TurnInQuestAt(1089,224);    --- In Defense of the King's Lands
 
 Log("Turning The Trogg Threat");
 TurnInQuestAt(1092,267);    --- The Trogg Threat
