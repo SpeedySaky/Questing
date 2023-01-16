@@ -121,7 +121,7 @@ MyInfo = DoObjective(Scout);
 
 
 Log("Turning In Defense of the King's Lands");
-TurnInQuestAt(1089,224);    --- In Defense of the King's Lands
+TurnInQuestAt(1092,224);    --- In Defense of the King's Lands
 
 Log("Turning The Trogg Threat");
 TurnInQuestAt(1092,267);    --- The Trogg Threat
