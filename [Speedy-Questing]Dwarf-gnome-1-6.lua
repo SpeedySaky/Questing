@@ -30,10 +30,14 @@ Log("Taking Dwarven Outfitters");
 
 AcceptQuestFrom(658,179);    --- Dwarven Outfitters
 
+Log("Doing Dwarven Outfitters");
+
 Wolf = {}; 
 Wolf[1] = 705;  
 KillLootWolf = CreateObjective("KillMobsAndLoot",1,8,1,179,TableToList(Wolf));
 MyInfo = DoObjective(KillLootWolf);
+
+Log("Turning Dwarven Outfitters");
 
 TurnInQuestAt(658,179);
 
@@ -52,7 +56,7 @@ TurnInQuestAt(926,3107);
 
 end;
 
-if (Player.Class == 1) and (IsOnQuest(3106)== False) then   --- Warrior
+if (Player.Class == 1) and (IsOnQuest(3106)== false) then   --- Warrior
 Log("Oh I am a warrior so i need to do class quest!");
 
 AcceptQuestFrom(658,3106);    --- Simple Rune-warrior
@@ -66,7 +70,7 @@ Log("Turning classs quest!");
 TurnInQuestAt(912,3106);
 
 end;
-if (Player.Class == 3) and (IsOnQuest(3108)== False) then   --- Hunter
+if (Player.Class == 3) and (IsOnQuest(3108)== false) then   --- Hunter
 Log("Oh I am a Hunter so i need to do class quest!");
 
 AcceptQuestFrom(658,3108);    --- Simple Rune-warrior
@@ -80,7 +84,7 @@ Log("Turning classs quest!");
 TurnInQuestAt(895,3108);
 
 end;
-if (Player.Class == 5) and (IsOnQuest(3110)== False) then   --- Priest
+if (Player.Class == 5) and (IsOnQuest(3110)== false) then   --- Priest
 Log("Oh I am a Priest so i need to do class quest!");
 
 AcceptQuestFrom(658,3110);    --- Simple Rune-warrior
@@ -95,7 +99,7 @@ TurnInQuestAt(837,3110);
 
 end;
 
-if (Player.Class == 4) and (IsOnQuest(3113)== False) then   --- Rogue
+if (Player.Class == 4) and (IsOnQuest(3113)== false) then   --- Rogue
 Log("Oh I am a Rogue so i need to do class quest!");
 
 AcceptQuestFrom(658,3113);    --- 
@@ -110,7 +114,7 @@ TurnInQuestAt(916,3113);
 
 end;
 
-if (Player.Class == 9) and (IsOnQuest(3115)== False) then   --- Warlock
+if (Player.Class == 9) and (IsOnQuest(3115)== false) then   --- Warlock
 Log("Oh I am a Warlock so i need to do class quest!");
 
 AcceptQuestFrom(658,3115);    --- 
@@ -127,7 +131,7 @@ TurnInQuestAt(460,3115);
 end;
 
 
-if (Player.Class == 8) and (IsOnQuest(3114)== False) then   --- Mage
+if (Player.Class == 8) and (IsOnQuest(3114)== false) then   --- Mage
 Log("Oh I am a Mage so i need to do class quest!");
 
 AcceptQuestFrom(658,3114);    --- 
